@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`humidity matches snapshot 1`] = `
+<div>
+  The Humidity is 
+  .
+</div>
+`;
+
+exports[`matches snapshot 1`] = `
+<div>
+  The Temprature is 
+  .
+</div>
+`;
+
+exports[`pressure matches snapshot 1`] = `
+<div>
+  The Air Pressure is 
+  5
+  .
+</div>
+`;
+
+exports[`temperature matches snapshot 1`] = `
+<div>
+  The Temprature is 
+  .
+</div>
+`;
+
+exports[`temperature matches snapshot 2`] = `
+<div>
+  The Temprature is 
+  5
+  .
+</div>
+`;
+
+exports[`temperature matches snapshot 3`] = `
+<div>
+  The Temprature is 
+  .
+</div>
+`;
