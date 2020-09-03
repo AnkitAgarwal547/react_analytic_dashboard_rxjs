@@ -5,19 +5,25 @@ import EventEmitter from '../Observable/emitter'
 
  function AirPressure(props) {
     const [state, setState] = React.useState();
+    const [seconds, setSeconds] = React.useState(0);
+
     const pressure = new EventEmitter();
 
     pressure.on('pressure_data',()=>{
-        withObserve(1000,5).subscribe(setState)
+        withObserve(Math.floor(Math.random() * 5000) + 2000, 4533).subscribe(setState);
         })
 
     React.useEffect(() => {
-        pressure.trigger('pressure_data');
+        const interval = setInterval(() => {
+            pressure.trigger('pressure_data');
+          }, Math.floor(Math.random() * 5000) + 2000);
+          
+          return () => clearInterval(interval);
     }, []);
 
     return (
         <div>
-            The Air Pressure is {state}.
+            The Air Pressure is  {state ===undefined ? "1" : state === 0 ? "N/A"  : state}.
         </div>
     )
 }
